@@ -28,4 +28,6 @@ Model repository
 
 ## 追加実験
 
-今後予定
+今後試したいデータセットたち or 追加学習したい
+https://zenn.dev/panyoriokome/scraps/bb96bd0e512124
+
