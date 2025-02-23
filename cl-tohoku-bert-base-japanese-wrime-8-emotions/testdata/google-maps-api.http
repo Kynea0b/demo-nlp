@@ -1,0 +1,7 @@
+
+
+GET https://maps.googleapis.com/maps/api/place/details/json
+?placeid=ChIJr_RQv8lMB2ARQBBhuppS_ac
+&key=${GOOGLE_API_KEY}
+&fields=reviews
+&language=ja
