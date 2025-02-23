@@ -37,7 +37,7 @@ def analyze_emotion(text, show_fig=False, ret_prob=False):
         df = pd.DataFrame(out_dict.items(), columns=['name', 'prob'])
         sns.barplot(x='name', y='prob', data=df)
         plt.title('入力文 : ' + text, fontsize=15)
-        plt.savefig("results/{}.png".format(text))
+        plt.savefig("{}.png".format(text))
 
     if ret_prob:
         return out_dict
@@ -55,27 +55,20 @@ model = AutoModelForSequenceClassification.from_pretrained(model_name)
 
 
 # 動作確認
-analyze_emotion('今日から長期休暇だぁーーー！！！', show_fig=True)
+import json
+
+with open('testdata/data.json', 'r', encoding='utf-8') as f:
+    json_data = f.read()
 
 
-analyze_emotion('この書類にはコーヒーかかってなくて良かった…。不幸中の幸いだ。', show_fig=True)
+data = json.loads(json_data)
 
+# reviews配列の各要素からtextフィールドを抽出して配列にする
+review_texts = [review["text"] for review in data["result"]["reviews"]]
 
-
-analyze_emotion('なんで自分だけこんな目に遭うんだ……', show_fig=True)
-
-
-analyze_emotion('君ならきっとやってくれると思っていたよ！', show_fig=True)
-
-
-analyze_emotion('え、今日って休校だったの？', show_fig=True)
-
-
-analyze_emotion('明日のプレゼンうまくできるかなぁ…', show_fig=True)
-
-
-
-analyze_emotion('あぁー、イライラするっ！！', show_fig=True)
+for index, text in enumerate(review_texts):
+    # print(f"Index: {index}, Item: {text}")
+    analyze_emotion(text, show_fig=True)
 
 
 
