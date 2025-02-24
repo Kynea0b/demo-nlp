@@ -82,7 +82,7 @@ Model repository
 
 ### 入力例
 
-Google Maps APIで試してみると快不快がはっきりしているので分類はちゃんとできてそう。
+Google Maps APIで試してみると口コミなどはネガポジがはっきりしているので分類はちゃんとできてそう。
 
 - [8-emotions.ipynb](https://github.com/Kynea0b/demo-nlp/blob/main/cl-tohoku-bert-base-japanese-wrime-8-emotions/8-emotions.ipynb)
 
