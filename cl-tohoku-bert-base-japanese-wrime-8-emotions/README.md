@@ -2,8 +2,6 @@
 
 ## ベースのモデル
 
-### About Dataset
-
 CC-100: 74.3GB
 Wikipedia: 4.9GB
 
@@ -14,6 +12,8 @@ tokenize tool:fugashi,mecab-ipadic-NEologd
 
 ## 追加学習用のデータセット
 
+テキストデータに対して、読んだ人の感想を8つの感情ごとに1~3点で評価済みのデータを教師ラベルとして追加学習に使用。
+
 > Ver.1: 80人の筆者から収集した43,200件の投稿に感情強度をラベル付けしました。
 
 - [ids-cv/wrime repository](https://github.com/ids-cv/wrime)
@@ -21,7 +21,7 @@ tokenize tool:fugashi,mecab-ipadic-NEologd
 
 テキスト分類用のデータセット
 
-### Summary
+### データセット詳細
 
 各行が1つの文章（Sentence）に対応しており、その文章に対して書き手（Writer）および複数の読者（Reader1, Reader2, Reader3）が感情を評価しています。 
 
