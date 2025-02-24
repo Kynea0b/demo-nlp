@@ -37,6 +37,18 @@ tokenize tool:fugashi,mecab-ipadic-NEologd
 
 #### **データの具体例** 
 
+8項目について、１点から３点で評価。
+- Joy
+- Sadness
+- Anticipation
+- Surprise
+- Anger
+- Fear
+- Disgust
+- Trust
+
+データ例。
+
 | 項目 | 値 | 
 |------|----| 
 | Sentence | ぼけっとしてたらこんな時間｡チャリあるから食べにでたいのに… | 
